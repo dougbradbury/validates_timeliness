@@ -19,7 +19,7 @@ module ValidatesTimeliness
     VALID_OPTION_KEYS = [
       :on, :if, :unless, :allow_nil, :empty, :allow_blank,
       :with_time, :with_date, :ignore_usec, :format,
-      :invalid_time_message, :invalid_date_message, :invalid_datetime_message
+      :invalid_time_message, :invalid_date_message, :invalid_datetime_message, :blank_message
     ] + RESTRICTION_METHODS.keys.map {|option| [option, "#{option}_message".to_sym] }.flatten
 
     DEFAULT_OPTIONS = { :on => :save, :type => :datetime, :allow_nil => false, :allow_blank => false, :ignore_usec => false }
