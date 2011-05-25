@@ -201,5 +201,12 @@ describe ValidatesTimeliness::Validator do
       Person.validates_date :birth_date, :before => Time.now, :before_message => 'custom before message'
       invalid!(:birth_date, Time.now, 'custom before message')
     end
+
+    it 'should have custom blank message' do
+      Person.validates_date :birth_date, :blank_message => 'custom blank message'
+      invalid!(:birth_date, nil, 'custom blank message')
+    end
+    
+    
   end
 end
