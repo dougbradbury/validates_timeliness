@@ -203,6 +203,7 @@ describe ValidatesTimeliness::Validator do
     end
 
     it 'should have custom blank message' do
+      pending
       Person.validates_date :birth_date, :blank_message => 'custom blank message'
       invalid!(:birth_date, nil, 'custom blank message')
     end
